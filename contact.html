@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/contact.css" type="text/css"/>
+    <title>Contact - created-by-pavel</title>
+    <meta name="description" content="created-by-pavel. The official website of created-by-pavel. EST 2022. SPB"/>
+    <meta name="keywords" content="created-by-pavel, clothes, store, shop, online store, buy clothes, stylish clothes"/>
+    <base target="_blank">
+</head>
+
+<body>
+<div id="wrapper">
+    <header>
+        <div id="logo_about">
+            <h1>created-by-pavel</h1>
+        </div>
+        <div class="menu">
+            <nav>
+                <menu>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Store</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contacts</a></li>
+                    <li><a href="#">Add to basket</a></li>
+                    <li><a href="#">Add product</a></li>
+                </menu>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div id="contacts">
+            <div id="label"><p>contact <span><b>created-by-pavel</b></span></p></div>
+            <div id="label_disc">
+                <p>ул. Арбат, 1а, Москва, 11902, Россия</p>
+                <p>+7 123 456-78-00</p>
+                <a href="">info@mail.ru</a>
+            </div>
+        </div>
+        <div id="f">
+            <form action="#" method="post">
+                <div id="form_wrapper">
+                    <div id="form1">
+                        <label for="name">name</label>
+                        <input type="text" id="name" name="user_name">
+                    </div>
+                    <div id="form2">
+                        <label for="lastname">last name</label>
+                        <input type="text" id="lastname" name="user_lastname">
+                    </div>
+                </div>
+
+                <div id="form3">
+                    <label for="mail">your email</label>
+                    <input type="email" id="mail" name="user_email">
+                </div>
+
+                <div id="form4">
+                    <label for="msg">message</label>
+                    <textarea id="msg" name="user_message"></textarea>
+                </div>
+                <div id="send_button">
+                    <button type="submit">send</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+
+        <div id="map"></div>
+        <script>
+            function initMap() {
+                var uluru = {lat: 55.7522316, lng: 37.6163621};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 17,
+                    center: uluru
+                });
+                var marker = new google.maps.Marker({
+                    position: uluru,
+                    map: map
+                });
+            }
+        </script>
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDNeomZeXnaV1uX1kaEf3RY0fBk5JCzPU&callback=initMap">
+        </script>
+
+        <div class="soc_nets">
+            <nav>
+                <ul>
+                    <li><a href="#"><img src="img/insta.jpg"></a></li>
+                    <li><a href="#"><img src="img/facebook.jpg"></a></li>
+                    <li><a href="#"><img src="img/vk.jpg"></a></li>
+                    <li><a href="#"><img src="img/linkedIn.jpg"></a></li>
+                    <li><a href="https://open.spotify.com/playlist/37i9dQZF1DX0XUsuxWHRQd?si=cfaa096bd9df439f"><img
+                            src="img/spotify.jpg"></a></li>
+                    <li><a href="https://www.youtube.com/watch?v=G1IbRujko-A"><img src="img/youtube.jpg"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

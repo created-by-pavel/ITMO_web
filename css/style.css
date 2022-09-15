@@ -1,0 +1,109 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: black;
+    height: 100%;
+}
+
+#wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+a, li {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 8%;
+}
+
+.logo {
+    background-color: red;
+    cursor: pointer;
+}
+
+h1 {
+    color: red;
+    font-size: 22px;
+    background-color: #FFFFFF;
+}
+
+menu li {
+    display: inline-block;
+    padding: 0 6px;
+}
+
+menu li a:hover {
+    color: red;
+}
+
+menu a {
+    font-size: 14px;
+}
+
+main {
+    flex: 1 1 auto;
+    display: flex;
+    opacity: 0.7;
+}
+
+#new_collection {
+    width: 50vw;
+    background-image: url("../img/hangers3.png");
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+
+#new_collection span {
+    display: flex;
+    justify-content: center;
+    margin-top: 60%;
+    overflow: hidden;
+}
+
+#logo_img {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo_img img {
+    width: 75%;
+    height: 80%;
+}
+
+footer {
+    background-color: black;
+}
+
+.soc_nets {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.soc_nets li {
+    display: inline-block;
+}
+
+.soc_nets img {
+    width: 45px;
+    height: 45px;
+}
+
+
+
