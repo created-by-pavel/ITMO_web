@@ -77,10 +77,6 @@ main {
     height: 99%;
 }
 
-footer {
-    background-color: black;
-}
-
 .soc_nets {
     display: flex;
     align-items: center;

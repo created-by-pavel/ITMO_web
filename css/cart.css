@@ -8,6 +8,7 @@
 html, body {
     background-color: black;
     height: 100%;
+    color: #fff;
 }
 
 #wrapper {
@@ -59,31 +60,75 @@ main {
     opacity: 0.7;
 }
 
-#new_collection {
+#cart_discr {
     width: 50vw;
-    background-image: url("../img/hangers3.png");
-    background-position: center;
-    background-size: 80%;
-    background-repeat: no-repeat;
 }
 
-#new_collection span {
+#cart_discr span {
     display: flex;
     justify-content: center;
-    margin-top: 60%;
-    overflow: hidden;
+    font-size: 40px;
+    margin-top: 5%;
 }
 
-#logo_img {
+#cart_wrapper {
     width: 50vw;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
 }
 
-#logo_img img {
-    width: 75%;
-    height: 80%;
+#cart {
+    height: 100%;
+    width: 70%;
+    border: solid 2px #fff;
+    padding: 1%;
+    overflow: scroll;
+}
+
+#cart_footer {
+    margin-top: 15%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    height: 15%;
+    border: solid 1px #fff;
+    margin-top: 2%;
+}
+
+.item_discr {
+    display: flex;
+    margin-top: 5%;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.item_photo img {
+    height: 100%;
+    width: 100px;
+}
+
+#total_price {
+    margin-top: 5%;
+    font-size: 18px;
+    text-decoration: underline;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#shipping {
+    color: red;
+    font-size: 12px;
+}
+
+#checkout {
+    background-color: red;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
 }
 
 .soc_nets {
