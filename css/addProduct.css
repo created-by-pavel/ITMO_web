@@ -23,7 +23,7 @@ a, li {
     color: #FFFFFF;
 }
 
-header {
+.header {
     background-color: black;
     display: flex;
     justify-content: space-between;
@@ -55,7 +55,7 @@ menu a {
     font-size: 14px;
 }
 
-main {
+.main {
     flex: 1 1 auto;
     display: flex;
     align-items: center;
@@ -97,7 +97,7 @@ textarea {
     resize: vertical;
 }
 
-#send_button {
+#addForm__send-button {
     display: flex;
     justify-content: flex-end;
     margin-top: 10px;
@@ -111,17 +111,17 @@ button {
     width: 70px;
 }
 
-.soc_nets {
+.soc-nets {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.soc_nets li {
+.soc-nets li {
     display: inline-block;
 }
 
-.soc_nets img {
+.soc-nets img {
     width: 45px;
     height: 45px;
 }

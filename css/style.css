@@ -21,7 +21,7 @@ a, li {
     color: #FFFFFF;
 }
 
-header {
+.header {
     background-color: black;
     display: flex;
     justify-content: space-between;
@@ -53,13 +53,13 @@ menu a {
     font-size: 14px;
 }
 
-main {
+.main {
     flex: 1 1 auto;
     display: flex;
     opacity: 0.7;
 }
 
-#new_collection {
+#new-collection {
     width: 50vw;
     background-image: url("../img/hangers3.png");
     background-position: center;
@@ -67,36 +67,36 @@ main {
     background-repeat: no-repeat;
 }
 
-#new_collection span {
+#new-collection span {
     display: flex;
     justify-content: center;
     margin-top: 60%;
     overflow: hidden;
 }
 
-#logo_img {
+#logo-img {
     width: 50vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#logo_img img {
+#logo-img img {
     width: 75%;
     height: 80%;
 }
 
-.soc_nets {
+.soc-nets {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.soc_nets li {
+.soc-nets li {
     display: inline-block;
 }
 
-.soc_nets img {
+.soc-nets img {
     width: 45px;
     height: 45px;
 }

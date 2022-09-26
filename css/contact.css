@@ -22,7 +22,7 @@ a, li {
     color: #FFFFFF;
 }
 
-header {
+.header {
     background-color: black;
     display: flex;
     justify-content: flex-end;
@@ -30,9 +30,9 @@ header {
     padding: 30px 8%;
 }
 
-#logo_about {
+#logo-about {
     background-color: red;
-    margin-right: 10%;
+    margin-right: 15%;
 }
 
 h1 {
@@ -54,10 +54,20 @@ menu a {
     font-size: 14px;
 }
 
-main {
+.main {
     flex: 1 1 auto;
     display: flex;
     padding: 0 7%;
+}
+
+#contacts__title {
+    width: 100%;
+    font-size: 2em;
+    margin-bottom: 7%;
+}
+
+#contacts__title span {
+    color: red;
 }
 
 #contacts {
@@ -68,30 +78,20 @@ main {
     flex-direction: column;
 }
 
-#f {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50vw;
-}
-
-#label {
-    width: 100%;
-    font-size: 2em;
-    margin-bottom: 7%;
-}
-
-#label span {
-    color: red;
-}
-
-#label_disc {
+#contacts__desc {
     width: 100%;
     font-size: 1.1em;
 }
 
-#label_disc p {
+#contacts__desc p {
     margin-bottom: 7%;
+}
+
+#contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
 }
 
 form {
@@ -100,16 +100,16 @@ form {
     padding: 1em;
 }
 
-#form_wrapper {
+#contact-form__inline-body {
     display: flex;
     margin-bottom: 20px;
 }
 
-#form1 {
+#contact-form__field1 {
     width: 50%;
 }
 
-#form2 {
+#contact-form__field2 {
     margin-left: 20px;
     width: 50%;
 }
@@ -136,7 +136,7 @@ textarea {
     resize: vertical;
 }
 
-#send_button {
+#contact-form__send-button {
     display: flex;
     justify-content: flex-end;
     margin-top: 10px;
@@ -155,17 +155,17 @@ button {
     height: 30vh;
 }
 
-.soc_nets {
+.soc-nets {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.soc_nets li {
+.soc-nets li {
     display: inline-block;
 }
 
-.soc_nets img {
+.soc-nets img {
     width: 45px;
     height: 45px;
 }

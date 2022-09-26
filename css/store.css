@@ -21,7 +21,7 @@ a, li {
     color: #FFFFFF;
 }
 
-header {
+.header {
     background-color: black;
     display: flex;
     justify-content: space-between;
@@ -53,14 +53,14 @@ menu a {
     font-size: 14px;
 }
 
-main {
+.main {
     flex: 1 1 auto;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#store_wrapper {
+#store-wrapper {
     width: 36%;
     display: flex;
     flex-wrap: wrap;
@@ -77,17 +77,17 @@ main {
     height: 99%;
 }
 
-.soc_nets {
+.soc-nets {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.soc_nets li {
+.soc-nets li {
     display: inline-block;
 }
 
-.soc_nets img {
+.soc-nets img {
     width: 45px;
     height: 45px;
 }
