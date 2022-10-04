@@ -9,6 +9,8 @@ html, body {
     background-color: black;
     height: 100%;
     color: #fff;
+    font-family: Courier, monospace;
+    font-size: 14px;
 }
 
 #wrapper {
@@ -20,6 +22,20 @@ html, body {
 a, li {
     text-decoration: none;
     color: #FFFFFF;
+    list-style: none;
+}
+
+.nav-link {
+    transition: 0.7s ease;
+    font-size: 14px;
+}
+
+.nav-item {
+    margin-left: 15px;
+}
+
+.nav-link:hover {
+    color: red;
 }
 
 .header {
@@ -28,6 +44,21 @@ a, li {
     justify-content: space-between;
     align-items: center;
     padding: 30px 8%;
+}
+
+.toggle-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
 }
 
 .logo {
@@ -41,17 +72,10 @@ h1 {
     background-color: #FFFFFF;
 }
 
-menu li {
-    display: inline-block;
-    padding: 0 6px;
-}
-
-menu li a:hover {
-    color: red;
-}
-
-menu a {
-    font-size: 14px;
+menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .main {
@@ -86,7 +110,7 @@ menu a {
 }
 
 #cart-footer {
-    margin-top: 15%;
+    margin-top: 10%;
     display: flex;
     justify-content: space-between;
 }
@@ -129,6 +153,7 @@ menu a {
     width: 100px;
     height: 30px;
     cursor: pointer;
+    color: #000;
 }
 
 .soc-nets {
@@ -146,5 +171,58 @@ menu a {
     height: 45px;
 }
 
+@media screen and (max-width: 991px) {
+    #cart-body {
+        width: 90%;
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 776px) {
+    .toggle-menu {
+        display: block;
+    }
+
+    .toggle-menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .toggle-menu.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .toggle-menu.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    menu {
+        flex-direction: column;
+    }
+
+    .menu {
+        z-index: 3;
+        background-color: #000;
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+        z-index: 3;
+    }
+
+    .menu.active {
+        left: 0;
+    }
+
+    #shipping {
+        font-size: 15px;
+    }
+}
 
 
