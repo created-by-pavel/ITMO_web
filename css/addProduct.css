@@ -10,6 +10,8 @@ html, body {
     background-color: #000;
     height: 100%;
     color: #ffffff;
+    font-family: Courier, monospace;
+    font-size: 14px;
 }
 
 #wrapper {
@@ -21,6 +23,20 @@ html, body {
 a, li {
     text-decoration: none;
     color: #FFFFFF;
+    list-style: none;
+}
+
+.nav-link {
+    transition: 0.7s ease;
+    font-size: 14px;
+}
+
+.nav-item {
+    margin-left: 15px;
+}
+
+.nav-link:hover {
+    color: red;
 }
 
 .header {
@@ -29,6 +45,21 @@ a, li {
     justify-content: space-between;
     align-items: center;
     padding: 30px 8%;
+}
+
+.toggle-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
 }
 
 .logo {
@@ -42,17 +73,10 @@ h1 {
     background-color: #FFFFFF;
 }
 
-menu li {
-    display: inline-block;
-    padding: 0 6px;
-}
-
-menu li a:hover {
-    color: red;
-}
-
-menu a {
-    font-size: 14px;
+menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .main {
@@ -105,6 +129,7 @@ textarea {
 
 button {
     background-color: red;
+    color: black;
     font-size: 0.75em;
     border: 0;
     height: 25px;
@@ -124,4 +149,57 @@ button {
 .soc-nets img {
     width: 45px;
     height: 45px;
+}
+
+@media screen and (max-width: 991px) {
+    #addForm {
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 776px) {
+    .toggle-menu {
+        display: block;
+    }
+
+    .toggle-menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .toggle-menu.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .toggle-menu.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    menu {
+        flex-direction: column;
+    }
+
+    .menu {
+        z-index: 3;
+        background-color: #000;
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+        z-index: 3;
+    }
+
+    .menu.active {
+        left: 0;
+    }
+
+    .body, #addForm, button {
+        font-size: 16px;
+    }
 }

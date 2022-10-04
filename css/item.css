@@ -9,6 +9,13 @@ html, body {
     background-color: #000;
     height: 100%;
     color: #FFFFFF;
+    font-family: Courier, monospace;
+    font-size: 14px;
+}
+
+a, li {
+    text-decoration: none;
+    list-style: none;
 }
 
 #wrapper {
@@ -27,22 +34,88 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .footer {
     flex: 0 0 auto;
 }
 
-#item-image {
-    height: 100%;
-    width: 100%;
+.carousel {
+    margin: 0 auto;
+    overflow: hidden;
     display: flex;
-    align-items: center;
     justify-content: center;
+
 }
 
-#item-image img {
+.slides {
     width: 50%;
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.slides::-webkit-scrollbar {
+    display: none;
+}
+
+.slides-item {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    height: 100%;
+    justify-content: center;
+    margin: 0 1rem;
+    scroll-snap-align: start;
+    transform: scale(1);
+    transform-origin: center center;
+    transition: transform .5s;
+    width: 100%;
+}
+
+.slider-nav {
+    align-items: center;
+    color: #fff;
+    display: inline-flex;
+    height: 1.5rem;
+    justify-content: center;
+    padding: .4rem;
+    text-decoration: none;
+    width: 1rem;
+}
+
+.slider-nav:hover,
+.slider-nav:active {
+    background-color: red;
+}
+
+.slide-1 img, .slide-2 img, .slide-3 img, .slide-4 img {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel__skip-link {
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    width: 1px;
+}
+
+.carousel__skip-link:focus {
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    font-size: 30px;
+    height: 680px;
+    justify-content: center;
+    opacity: .8;
+    text-decoration: none;
+    width: 100%;
+    z-index: 1;
 }
 
 #item-body {
@@ -57,16 +130,13 @@ html, body {
     font-size: 1em;
 }
 
-#item-body__logo-button {
-    width: 30%;
+#item-body__logo {
+    cursor: pointer;
+    font-size: 0.9em;
+    background-color: #FFFFFF;
 }
 
-#item-body__logo-button button {
-    cursor: pointer;
-    width: 70%;
-    height: 2.5em;
-    font-size: 25px;
-    background-color: #FFFFFF;
+#item-body__logo h1 {
     color: red;
 }
 
@@ -75,10 +145,9 @@ html, body {
 }
 
 #item-body__buy-button button {
-    cursor: pointer;
-    height: 100%;
     width: 30%;
-    font-size: 15px;
+    cursor: pointer;
+    font-size: 16px;
     background-color: red;
     color: #000;
     font-weight: bold;
@@ -91,4 +160,43 @@ html, body {
 #item-body__buy-button button:hover::before {
     content: attr(hover-text);
     font-size: 18px;
+}
+
+@media screen and (max-width: 1056px) {
+    #item-body__description {
+        padding: 2% 1%;
+        width: 55%;
+    }
+
+    #item-body__buy-button {
+        width: 7%;
+    }
+
+    #item-body__buy-button button {
+        width: 100%;
+    }
+
+    #wrapper {
+        padding: 0 7%;
+    }
+}
+
+@media screen and (max-width: 776px) {
+    .slides {
+        width: 80%;
+    }
+
+    #item-body {
+        flex-direction: column;
+        padding-bottom: 3%;
+    }
+
+    #item-body__description {
+        text-align: center;
+        width: 75%;
+    }
+
+    #item-body__buy-button {
+        width: 15%;
+    }
 }
