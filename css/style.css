@@ -128,6 +128,15 @@ menu {
     background-size: cover;
 }
 
+.coords {
+    text-align: right;
+    color: #fff;
+    font-size: 12px;
+    position: absolute;
+    right: 20px;
+    top: 76%;
+}
+
 .soc-nets {
     display: flex;
     align-items: center;
@@ -199,6 +208,10 @@ menu {
 
     .item:hover {
         flex-basis: 100%;
+    }
+
+    .coords {
+        display: none;
     }
 }
 
