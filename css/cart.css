@@ -123,6 +123,10 @@ menu {
     margin-top: 2%;
 }
 
+.item__price {
+    width: 50%;
+}
+
 .item__desc {
     display: flex;
     margin-top: 5%;
@@ -141,6 +145,17 @@ menu {
     text-decoration: underline;
     display: flex;
     justify-content: flex-end;
+}
+
+.delete-cart {
+    display: flex;
+    font-size: 15px;
+    justify-content: start;
+    text-decoration: underline;
+}
+
+.delete-cart:hover {
+    color: red;
 }
 
 #shipping {
@@ -193,6 +208,18 @@ menu {
 
     .toggle-menu.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
+    #cart {
+        padding: 5%;
+    }
+
+    #cart-title, #cart, #cart-body {
+        width: 100vw;
     }
 
     menu {
