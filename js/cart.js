@@ -21,7 +21,9 @@ totalPrice.textContent += total;
 const deleteCart = document.querySelector('.delete-cart');
 deleteCart.addEventListener('click', function (e) {
     localStorage.removeItem('products');
+    location.reload();
     e.preventDefault();
+    return false;
 });
 
 
